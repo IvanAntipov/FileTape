@@ -29,6 +29,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <PostBuildEvent>
+	"$(SolutionDir).nuget\nuget.exe" pack "$(SolutionDir).nuget\FileTape.nuspec" -OutputDirectory "$(MSBuildProjectDirectory)\$(OutputPath.TrimEnd('\'))" -IncludeReferencedProjects
+	</PostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="protobuf-net">
       <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>

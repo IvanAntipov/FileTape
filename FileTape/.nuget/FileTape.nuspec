@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>FileTape</id>
+    <version>1.0.0.0</version>
+    <title>FileTape</title>
+    <authors>Ivan Antipov</authors>
+    <owners>Ivan Antipov</owners>
+    <licenseUrl>https://github.com/IvanAntipov/FileTape/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/IvanAntipov/FileTape</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Append only - fast scan data storage</description>
+    <releaseNotes>Initial concept</releaseNotes>
+    <copyright>Copyright 2016</copyright>    
+  
+    <dependencies>
+      <group targetFramework="net45">
+        <dependency id="protobuf-net" version="2.0.0.668" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\FileTape\bin\Release\FileTape.*" target="lib\net45" />
+  </files>
+</package>
