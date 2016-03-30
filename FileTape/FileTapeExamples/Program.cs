@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using FileTape.Appenders;
 using FileTape.PartitionHeaderFormatters;
 using FileTape.PartitionsEnumeration;
 
-namespace FileTapeExaples
+namespace FileTapeExamples
 {
     class Program
     {

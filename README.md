@@ -1,4 +1,4 @@
 # FileTape
 Append only - fast scan data storage.
 
-See FileTapeExaples for examples.
+See FileTapeExamples for examples.

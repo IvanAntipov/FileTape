@@ -7,8 +7,8 @@
     <ProjectGuid>{3705BF32-374C-44C3-85BC-BECBD43004A5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FileTapeExaples</RootNamespace>
-    <AssemblyName>FileTapeExaples</AssemblyName>
+    <RootNamespace>FileTapeExamples</RootNamespace>
+    <AssemblyName>FileTapeExamples</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
