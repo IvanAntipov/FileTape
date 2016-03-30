@@ -5,7 +5,7 @@ namespace FileTape.Helpers
 {
     public static class ReadCursorProviderExtensions
     {
-        public static IReadOnlyCollection<byte[]> ReadAll(IReadPartitionCursorProvider provider)
+        public static IReadOnlyCollection<byte[]> ReadAll(this IReadPartitionCursorProvider provider)
         {
             using (var cursor = provider.CreateCursor())
             {
