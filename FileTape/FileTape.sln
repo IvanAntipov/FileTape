@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTape", "FileTape\FileTape.csproj", "{D2A25141-C0B7-44EC-A956-73909446E6FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTapeExaples", "FileTapeExaples\FileTapeExaples.csproj", "{3705BF32-374C-44C3-85BC-BECBD43004A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D2A25141-C0B7-44EC-A956-73909446E6FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2A25141-C0B7-44EC-A956-73909446E6FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2A25141-C0B7-44EC-A956-73909446E6FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3705BF32-374C-44C3-85BC-BECBD43004A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3705BF32-374C-44C3-85BC-BECBD43004A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3705BF32-374C-44C3-85BC-BECBD43004A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3705BF32-374C-44C3-85BC-BECBD43004A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
