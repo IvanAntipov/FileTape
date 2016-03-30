@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Appenders\DirectAppender.cs" />
+    <Compile Include="Helpers\ReadCursorExtensions.cs" />
+    <Compile Include="Helpers\ReadCursorProviderExtensions.cs" />
     <Compile Include="PartitionsEnumeration\DirectoryPartitionsEnumerator.cs" />
     <Compile Include="PartitionsEnumeration\IPartitionsEnumerator.cs" />
     <Compile Include="ReadCursors\IReadPartitionCursor.cs" />
