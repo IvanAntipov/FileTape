@@ -50,7 +50,7 @@ namespace FileTape.PartitionsEnumeration
                 ? 0
                 : last.Number + 1;
 
-            return number + "." + DataFileExtension;
+            return string.Format( number.ToString("D8") + "." + DataFileExtension);
         }
     }
 }
