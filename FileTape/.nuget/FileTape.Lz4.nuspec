@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>FileTape.Lz4</id>
-    <version>1.0.0.7</version>
+    <version>1.0.0.9</version>
     <title>FileTape.Lz4</title>
     <authors>Ivan Antipov</authors>
     <owners>Ivan Antipov</owners>
@@ -18,7 +18,7 @@
         <dependency id="protobuf-net" version="2.0.0.668" />
       </group>
       <group>
-        <dependency id="FileTape" version="1.0.0.7" />
+        <dependency id="FileTape" version="1.0.0.9" />
       </group>
       <group>
         <dependency id="IonKiwi.lz4.net" version="1.0.5" />

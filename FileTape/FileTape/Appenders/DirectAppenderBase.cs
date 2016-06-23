@@ -59,11 +59,16 @@ namespace FileTape.Appenders
             }
 
             var newPartitionName = _partitionsEnumerator.CreateFileNameForNextPartition();
+            Check(tmpFileName);
             File.Move(tmpFileName,Path.Combine(_path,newPartitionName));
         }
 
         protected abstract string TmpFileName { get; }
 
         protected abstract Stream CreateWriteStream(string tmpFileName);
+
+        protected virtual void Check(string tmpFileName)
+        {
+        }
     }
 }
