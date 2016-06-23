@@ -1,56 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using FileTape.PartitionHeaderFormatters;
 using FileTape.ReadCursors;
 
 namespace FileTape.PartitionsEnumeration
 {
-    public class DirectoryPartitionsEnumerator : IPartitionsEnumerator
+    public class DirectoryPartitionsEnumerator : DirectoryPartitionsEnumeratorBase
     {
-        private const string DataFileExtension = "ftd";
-        private const string DataFileMask = "*."+DataFileExtension;
-        private readonly string _path;
         private readonly IPartitionHeaderFormatter _partitionHeaderFormatter;
 
         public DirectoryPartitionsEnumerator(string path, IPartitionHeaderFormatter partitionHeaderFormatter)
+            :base(path)
         {
-            _path = path;
             _partitionHeaderFormatter = partitionHeaderFormatter;
         }
 
-        public IEnumerable<IReadPartitionCursorProvider> GetCursors()
+        protected override string DataFileExtension
         {
-            var files = new DirectoryInfo(_path).GetFiles(DataFileMask, SearchOption.TopDirectoryOnly);
-
-            var orderedFiles = files.Select(
-                f => new
-                {
-                    File = f,
-                    Number = int.Parse(Path.GetFileNameWithoutExtension(f.FullName))
-                })
-                .OrderBy(i => i.Number);
-
-            return orderedFiles.Select(f => new ReadPartitionCursorProvider(f.File.OpenRead, _partitionHeaderFormatter));
+            get { return "ftd"; }
         }
 
-        public string CreateFileNameForNextPartition()
+        protected override IReadPartitionCursorProvider CreateCursor(FileInfo file)
         {
-            var files = new DirectoryInfo(_path).GetFiles(DataFileMask, SearchOption.TopDirectoryOnly);
-
-            var last = files.Select(
-                f => new
-                {
-                    Number = int.Parse(Path.GetFileNameWithoutExtension(f.FullName))
-                })
-                .OrderByDescending(i => i.Number).FirstOrDefault();
-
-            var number = last == null
-                ? 0
-                : last.Number + 1;
-
-            return string.Format( number.ToString("D8") + "." + DataFileExtension);
+            return new ReadPartitionCursorProvider(file.OpenRead, _partitionHeaderFormatter);
         }
     }
 }

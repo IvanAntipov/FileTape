@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTape", "FileTape\FileTape.csproj", "{D2A25141-C0B7-44EC-A956-73909446E6FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTapeExamples", "FileTapeExamples\FileTapeExamples.csproj", "{3705BF32-374C-44C3-85BC-BECBD43004A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTape.Lz4", "FileTape.Lz4\FileTape.Lz4.csproj", "{381AE2BF-9EDA-462B-B2A6-55D2F4586929}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3705BF32-374C-44C3-85BC-BECBD43004A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3705BF32-374C-44C3-85BC-BECBD43004A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3705BF32-374C-44C3-85BC-BECBD43004A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381AE2BF-9EDA-462B-B2A6-55D2F4586929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381AE2BF-9EDA-462B-B2A6-55D2F4586929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381AE2BF-9EDA-462B-B2A6-55D2F4586929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381AE2BF-9EDA-462B-B2A6-55D2F4586929}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
