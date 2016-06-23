@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>FileTape</id>
-    <version>1.0.0.5</version>
+    <version>1.0.0.7</version>
     <title>FileTape</title>
     <authors>Ivan Antipov</authors>
     <owners>Ivan Antipov</owners>
@@ -14,7 +14,7 @@
     <copyright>Copyright 2016</copyright>    
   
     <dependencies>
-      <group targetFramework="net45">
+      <group>
         <dependency id="protobuf-net" version="2.0.0.668" />
       </group>
     </dependencies>

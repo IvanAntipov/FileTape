@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>FileTape.Lz4</id>
-    <version>1.0.0.5</version>
+    <version>1.0.0.7</version>
     <title>FileTape.Lz4</title>
     <authors>Ivan Antipov</authors>
     <owners>Ivan Antipov</owners>
@@ -14,14 +14,14 @@
     <copyright>Copyright 2016</copyright>    
   
     <dependencies>
-      <group targetFramework="net45">
+      <group>
         <dependency id="protobuf-net" version="2.0.0.668" />
       </group>
-      <group targetFramework="net45">
-        <dependency id="FileTape" version="1.0.0.5" />
+      <group>
+        <dependency id="FileTape" version="1.0.0.7" />
       </group>
-      <group targetFramework="net45">
-        <dependency id="Lz4.Net" version="1.0.98" />
+      <group>
+        <dependency id="IonKiwi.lz4.net" version="1.0.5" />
       </group>
     </dependencies>
   </metadata>

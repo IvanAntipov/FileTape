@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using FileTape.PartitionHeaderFormatters;
 using FileTape.PartitionsEnumeration;
 using FileTape.ReadCursors;
+using lz4;
 
 namespace FileTape.Lz4
 {
@@ -30,9 +31,8 @@ namespace FileTape.Lz4
             return 
                 new ReadPartitionCursorProvider(
                     () =>
-                        new Lz4Net.Lz4DecompressionStream(
-                            file.OpenRead(),
-                            true),
+                        LZ4Stream.CreateDecompressor(
+                            file.OpenRead(),LZ4StreamMode.Read),
                         _partitionHeaderFormatter);
         }
     }            
