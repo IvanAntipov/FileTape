@@ -131,7 +131,17 @@ namespace FileTape.Appenders
 
         private void StartWriteLoopAsync()
         {
-            Task.Run(() => StartWriteLoopSync(false));
+            Task.Run(
+                () =>
+                {
+                    try
+                    {
+                        StartWriteLoopSync(false);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                });
         }
         private void StartWriteLoopSync(bool flush)
         {
