@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appenders\BufferedAppender.cs" />
     <Compile Include="Appenders\DirectAppender.cs" />
     <Compile Include="Appenders\DirectAppenderBase.cs" />
     <Compile Include="Helpers\ReadCursorExtensions.cs" />
