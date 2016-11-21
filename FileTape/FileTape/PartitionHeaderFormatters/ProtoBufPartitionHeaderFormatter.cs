@@ -25,7 +25,12 @@ namespace FileTape.PartitionHeaderFormatters
 
             using (var memoryStream = new MemoryStream(data))
             {
-                return Serializer.Deserialize<PartitionHeader>(memoryStream);
+                var res = Serializer.Deserialize<PartitionHeader>(memoryStream);
+                if (res.PartitionMap == null)
+                {
+                    return new PartitionHeader(res.PartitionId,new PartitionMapItem[0],res.CustomProperties);// Протобуф десериализует пустые коллекции в null
+                }
+                return res;
             }
         }
 
