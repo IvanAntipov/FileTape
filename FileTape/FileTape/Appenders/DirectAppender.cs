@@ -16,7 +16,7 @@ namespace FileTape.Appenders
 
         protected override Stream CreateWriteStream(string tmpFileName)
         {
-            return File.OpenWrite(tmpFileName);
+            return File.Create(tmpFileName);
         }
 
         protected override string TmpFileName

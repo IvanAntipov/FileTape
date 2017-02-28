@@ -35,7 +35,7 @@ namespace FileTape.Lz4
 
         protected override Stream CreateWriteStream(string tmpFileName)
         {
-            return LZ4Stream.CreateCompressor(File.OpenWrite(tmpFileName),LZ4StreamMode.Write);
+            return LZ4Stream.CreateCompressor(File.Create(tmpFileName),LZ4StreamMode.Write);
         }
 
         protected override void Check(string tmpFileName)
