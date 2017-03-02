@@ -14,18 +14,20 @@ namespace FileTape.Lz4
     public class DirectLz4Appender : DirectAppenderBase
     {
         private readonly bool _verifyCheckSum;
-
+        private readonly LZ4FrameBlockMode _blockMode;
         public DirectLz4Appender(
             string path, 
             IPartitionsEnumerator partitionsEnumerator, 
             IPartitionHeaderFormatter formatter,
-            bool verifyCheckSum=true) 
+            bool verifyCheckSum=true,
+            LZ4FrameBlockMode blockMode = LZ4FrameBlockMode.Linked) 
             : base(
                 path,
                 partitionsEnumerator,
                 formatter)
         {
             _verifyCheckSum = verifyCheckSum;
+            _blockMode = blockMode;
         }
 
         protected override string TmpFileName
@@ -35,7 +37,7 @@ namespace FileTape.Lz4
 
         protected override Stream CreateWriteStream(string tmpFileName)
         {
-            return LZ4Stream.CreateCompressor(File.Create(tmpFileName),LZ4StreamMode.Write);
+            return LZ4Stream.CreateCompressor(File.Create(tmpFileName),LZ4StreamMode.Write, _blockMode);
         }
 
         protected override void Check(string tmpFileName)
