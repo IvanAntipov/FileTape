@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="lz4.AnyCPU.loader, Version=1.0.8.0, Culture=neutral, PublicKeyToken=7aa3c636ef56b77f, processorArchitecture=MSIL">
-      <HintPath>..\packages\IonKiwi.lz4.net.1.0.8\lib\net45\lz4.AnyCPU.loader.dll</HintPath>
+    <Reference Include="lz4.AnyCPU.loader, Version=1.0.11.0, Culture=neutral, PublicKeyToken=7aa3c636ef56b77f">
+      <HintPath>..\packages\IonKiwi.lz4.net.1.0.11\lib\net45\lz4.AnyCPU.loader.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -52,14 +52,6 @@
       <Project>{d2a25141-c0b7-44ec-a956-73909446e6fa}</Project>
       <Name>FileTape</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="lz4.x64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lz4.x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
